@@ -1,4 +1,4 @@
-# IEEE Paper Extractor
+# ieee-latex-copier
 
 这是一个针对 IEEE Xplore HTML 论文页的 Chrome / Edge 扩展。它的目标不是只复制公式，而是把当前论文页面尽量整理成可读的文字版导出来。
 

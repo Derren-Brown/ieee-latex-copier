@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "IEEE Paper Extractor",
+  "name": "ieee-latex-copier",
   "version": "0.5.1",
   "description": "Extract readable text, equations, captions, and references from IEEE Xplore HTML article pages.",
   "permissions": [
@@ -17,7 +17,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "IEEE Paper Extractor",
+    "default_title": "ieee-latex-copier",
     "default_popup": "popup.html"
   },
   "content_scripts": [

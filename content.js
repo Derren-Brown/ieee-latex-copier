@@ -237,7 +237,7 @@
         setBadgeState(badge, 'copied');
         window.dispatchEvent(new CustomEvent('ieee-paper-extractor:last-copy', { detail: result }));
       } catch (err) {
-        console.error('[IEEE Paper Extractor] copy failed:', err);
+        console.error('[ieee-latex-copier] copy failed:', err);
         setBadgeState(badge, 'failed');
       }
       setTimeout(() => setBadgeState(badge, 'idle'), 1200);
@@ -835,7 +835,7 @@
     const nodes = findEquationContainers();
     const extracted = nodes.map((node, idx) => ({ idx: idx + 1, ...extractEquationSource(node) })).filter((x) => x.source);
     const content = [
-      `% IEEE Paper Extractor formula export`,
+      `% ieee-latex-copier formula export`,
       `% URL: ${location.href}`,
       `% Extracted: ${new Date().toISOString()}`,
       '',
@@ -858,7 +858,7 @@
     panel.id = 'ieee-paper-extractor-panel';
     panel.innerHTML = `
       <div class="header">
-        <strong>IEEE Paper Extractor</strong>
+        <strong>ieee-latex-copier</strong>
         <button type="button" class="close-btn" aria-label="Close">×</button>
       </div>
       <div class="toolbar">
