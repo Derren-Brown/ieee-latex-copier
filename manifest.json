@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "IEEE Paper Extractor",
+  "version": "0.5.1",
+  "description": "Extract readable text, equations, captions, and references from IEEE Xplore HTML article pages.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://ieeexplore.ieee.org/*",
+    "https://*.ieee.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "IEEE Paper Extractor",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ieeexplore.ieee.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

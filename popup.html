@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IEEE Paper Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>IEEE Paper Extractor</h1>
+    <p id="status">检测当前标签页…</p>
+    <div class="actions">
+      <button id="rescanBtn">重新扫描页面</button>
+      <button id="copyMdBtn">复制全文 Markdown</button>
+      <button id="copyTxtBtn">复制全文纯文本</button>
+      <button id="downloadMdBtn">下载 Markdown</button>
+      <button id="downloadTxtBtn">下载纯文本</button>
+      <button id="copyEqBtn">复制本页全部公式</button>
+      <button id="panelBtn">打开页内面板</button>
+    </div>
+    <textarea id="output" placeholder="这里会显示导出的内容"></textarea>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
